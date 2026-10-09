@@ -1,0 +1,377 @@
+/* ==============================================
+   PALETA DE COLORES
+   Base: Negro Azabache (#121212) / Antracita (#1e1e1e)
+   Contraste: Blanco Puro (#ffffff) / Crudo (#e0e0e0)
+   Acento: Naranja Neón / Grafiti (#ff6f00)
+   ============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+.header {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 10px;
+    border-top: 3px solid #ff6f00;
+}
+
+.brand-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.brand-title span {
+    color: #ff6f00;
+}
+
+.brand-sub {
+    font-size: 0.65rem;
+    color: #e0e0e0;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff6f00;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    color: #ff6f00;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: #ff6f00;
+    color: #121212;
+    padding: 12px 30px;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #ffffff;
+    color: #121212;
+    transform: scale(1.05);
+}
+
+/* SECCIÓN CATÁLOGO */
+.catalog-container {
+    padding: 50px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    color: #ff6f00;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 2px solid #ff6f00;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #ff6f00;
+    color: #121212;
+}
+
+/* GRILLA DE PRODUCTOS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6f00;
+}
+
+.product-img-box {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff6f00;
+    color: #121212;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #ff6f00;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.desc {
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+/* Botón de WhatsApp en Productos */
+.btn-ws {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-ws:hover {
+    background-color: #1eb954;
+    color: #ffffff;
+}
+
+/* SOBRE NOSOTROS */
+.about-section {
+    background-color: #1e1e1e;
+    padding: 60px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.about-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #ff6f00;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 2px solid #ff6f00;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1eb954;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+/* Ajuste para el logo del banner principal */
+.hero-logo {
+    max-width: 200px; /* Cambia este valor según tu gusto (ej. 150px a 220px) */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* Ajuste para el logo de la barra superior/menú */
+.site-logo {
+    max-height: 50px;
+    width: auto;
+}
+/* Aplica sombra solo al logo del banner */
+.hero-logo img {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+.hero {
+    padding-bottom: 60px; /* Prueba subiendo a 80px si quieres más espacio */
+}
+.hero-logo img {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.hero {
+    padding-bottom: 60px;
+}
+
+/* Estilo para el botón de WhatsApp */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: #ffffff !important;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
